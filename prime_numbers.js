@@ -7,20 +7,39 @@
 //2.gets all prime numbers from zero to the max number
 //3.returns all the prime numbers 
 
-function getMax(max){
-  const primeNumbers=[]
-  for(let i=0;i<=max;i++){
-    flag=0
-    for(let j=2;j<i;j++){
-      if (i%j==0){
-        flag=1
-        break
+// function getMax(max){
+//   const primeNumbers=[]
+//   for(let i=0;i<=max;i++){
+//     flag=0
+//     for(let j=2;j<i;j++){
+//       if (i%j==0){
+//         flag=1
+//         break
+//       }
+//     }
+//     if(i>1 && flag ==0)
+//     primeNumbers.push(i)
+//   }
+//  console.log(primeNumbers)
+// }
+
+// getMax(200)
+
+const prompt=require("prompt-sync")()
+const limit=prompt("Enter limit")
+
+function getPrime(limit){
+  for(let i=2;i<=limit;i++){
+    isPrime=true
+    for(j=2;j<i;j++){
+      if(i%j===0){
+        isPrime=false
       }
     }
-    if(i>1 && flag ==0)
-    primeNumbers.push(i)
+    if(isPrime){
+      console.log(i)
+    }
   }
- console.log(primeNumbers)
+  
 }
-
-getMax(200)
+getPrime(limit)

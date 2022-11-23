@@ -13,7 +13,7 @@ const height=prompt("Enter the height?")
 const base=prompt("Enter the base?")
 
 function area(height,base){
-  const answer=1/2*height*base
+  const answer=1/2*base*height
   console.log(answer)
 }
 

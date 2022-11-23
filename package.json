@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "node": "^19.1.0",
     "prompt-sync": "^4.2.0"
   }
 }
