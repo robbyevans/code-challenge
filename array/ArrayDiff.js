@@ -1,12 +1,10 @@
 function arrayDiffVeryFast(a, b) {
   // show me who the best!
-  for (let item of a){
-    for(let number of b){
-      if (item!=number){
-        console.log(item) 
-      }
-    }
+  const setA= new Set(a)
+  const setB = new Set(b)
+  
+  for( const element of setB){
+    setA.delete(element)
   }
+  return Array.from(setA)
 }
-
-arrayDiffVeryFast([1,2,3],[5,2,3])
