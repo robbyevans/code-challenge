@@ -13,7 +13,7 @@
 // The order of the permutations doesn't matter.
 
 
-//solution
+//solution to the problem
 
 function permutations(string) {
   // first a type check to make sure we are dealing with a proper var
@@ -39,8 +39,11 @@ function permutations(string) {
 
       // set another for loop iterating over the recursive return values for the permutations array, this time passing in the remainder of the string
       for (let permutation of permutations(remainder)){
-          permutationsArray.push(char + permutation)
+          permutationsArr.push(char + permutation)
       }
   }
   return permutationsArr;
 }
+
+
+console.log( permutations("hello"))
