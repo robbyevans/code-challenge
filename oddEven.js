@@ -12,7 +12,7 @@
 //call the function on the number.
 
 const prompt = require('prompt-sync')();
-const limit = prompt('input any number?');
+const number = prompt('input any number?');
 
 // function oddEven(limit){
 //   for(let i=0;i<=limit;i++){
@@ -24,11 +24,18 @@ const limit = prompt('input any number?');
   
 // }
 
-function oddEven(limit){
-  for(let i=0;i<=limit;i++){
-    const message=(i%2===0)?'Even':'Odd'
-    console.log(i,message)
+// function oddEven(number){
+//   for(let i=0;i<=number;i++){
+//     const message=(i%2===0)?'Even':'Odd'
+//     console.log(i,message)
+//   }
+// }
+
+function oddEven(number){
+  if (number%2===0){
+    console.log (number+" Even")
   }
+  else console.log(number+" Odd")
 }
 
-oddEven(limit)
+oddEven(number)
