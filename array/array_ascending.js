@@ -4,19 +4,20 @@
 
 //pseudocode
 
-const prompt= require("prompt-sync")()
-const numbers=prompt('enter numbers?')
-array=[]
-array.push(numbers)
+// const prompt= require("prompt-sync")()
+// const numbers=prompt('enter numbers?')
+// array=[]
+// array.push(numbers)
 function arrange(array){
   squaredArray=[]
   for (items of array){
     squaredArray.push(items**2)
   }
-  return squaredArray.sort
+  console.log(squaredArray)
+  return squaredArray.sort(function(a,b){return b-a})
 }
 
-console.log(arrange(array))
+console.log(arrange([5,4,3,2,1]))
 
 
 

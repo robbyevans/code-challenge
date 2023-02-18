@@ -1,3 +1,12 @@
+//pseudocode
+//1.create a function called plusMinus that takes an array as argument,
+//2.declare an empty variable p,v,z all =0 and a constant n = array.length
+//3.iterate over the array ,
+//4.check if either the elements in the array are positive,negative or zero using the if statements while adding the respective variables by 1
+//5 return the division of the variable with n to 5decimal places
+
+
+
 function plusMinus(arr) {
   // Write your code here
   

@@ -29,6 +29,7 @@ const prompt=require("prompt-sync")()
 const limit=prompt("Enter limit")
 
 function getPrime(limit){
+  let primeNumbers=[]
   for(let i=2;i<=limit;i++){
     isPrime=true
     for(j=2;j<i;j++){
@@ -37,9 +38,9 @@ function getPrime(limit){
       }
     }
     if(isPrime){
-      console.log(i)
+      primeNumbers.push(i)
     }
   }
   
 }
-getPrime(limit)
+console.log(getPrime(limit))

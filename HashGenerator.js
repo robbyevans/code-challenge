@@ -15,14 +15,14 @@
 
 const mySentence = "freeCodeCamp is an awesome resource";
 
-function Uppercase(sentence){
+function hashGenerator(sentence){
 const words = sentence.split(" ");
-
+console.log(words)
 for (let i = 0; i < words.length; i++) {
     words[i] = words[i][0].toUpperCase() + words[i].substr(1);
 }
 
-return words.join(" ");
+return "#"+words.join("");
 }
 
-console.log(Uppercase(mySentence))
+console.log(hashGenerator(mySentence))
