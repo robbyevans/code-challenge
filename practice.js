@@ -1,25 +1,51 @@
-//Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+//Given an array of integers, where all elements but one occur twice, find the unique element.
 
-// HH = hours, padded to 2 digits, range: 00 - 99
-// MM = minutes, padded to 2 digits, range: 00 - 59
-// SS = seconds, padded to 2 digits, range: 00 - 59
-// The maximum time never exceeds 359999 (99:59:59)
+//Example 
+  //a=[1,2,3,4,3,2,1]
+//The unique element is 4 .
 
-// You can find some examples in the test fixtures.
+//Function Description
 
+//pseudocode
 
-// function humanReadable (seconds) {
-//   let HH=Math.floor(seconds/3600)
-//   let min=Math.floor((seconds%3600)/60)
-//   let sec=Math.floor(seconds%60)
-  
-//   console.log(`${('0' + HH).slice(-2)}::${('0' + min).slice(-2)}::${('0' + sec).slice(-2)}`)
-// }
-// ('0' + 11).slice(-2)
+//1.define a function lonelyInteger that takes an array of integers
+//2.iterate over  the array to find the number of occurence of each item in the array
+//3.return the element that occurs only once
 
-// humanReadable(1000)
+//soln
 
-
-function millitary(time){
-
+//Javascript program to find the array element
+// that appears only once
+ 
+    // Function to find the
+    function findSingle(array){
+ 
+    // Iterate over every element
+    for (let i = 0; i < array.length; i++) {
+ 
+        // Initialize count to 0
+        let count = 0;
+ 
+        for (let j = 0; j < array.length; j++) {
+ 
+            // Count the frequency
+            // of the element
+            if (array[i] == array[j]) {
+                count++;
+            }
+        }
+ 
+        // if the frequency of the
+        // element is one
+        if (count == 1) {
+            return array[i];
+        }
+    }
+ 
+    // if no element exist at most once
+    return -1;
 }
+ 
+// Driver code
+;
+console.log(findSingle([ 2,2, 3,1, 5, 4, 5, 3, 4 ]))
