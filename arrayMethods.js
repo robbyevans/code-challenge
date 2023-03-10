@@ -16,7 +16,7 @@ console.log(moviesData.filter(function(movie){
 
 //array.map
 console.log(moviesData.map(function(movie){
-  return  movie.title+" like=0"
+  return  movie.year>2012&&movie.rating>3
 }))
 
 //array.find
@@ -26,7 +26,7 @@ console.log(moviesData.find(function(movie){
 
 //array.forEach
 console.log(moviesData.forEach(function(movie){
-  return movie.title+"hello"
+  return movie.title
 }))
 
 //array.reduce

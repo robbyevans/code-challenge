@@ -1,4 +1,5 @@
-//write a function that generates an array from a range (min,max)
+//write a function that generates an array from a
+// range (min,max)
 
 const prompt=require("prompt-sync")()
 const min=prompt("Enter min?")

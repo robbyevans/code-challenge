@@ -1,4 +1,5 @@
-//function to show number of occurence of an element in an array
+//function to show number of occurence of an 
+//element in an array
 
 
 function occurence(array,item){
