@@ -19,4 +19,4 @@ function solution(N) {
   return maxGap;
 }
 
-console.log(solution(32))
+console.log(solution(17))

@@ -24,7 +24,7 @@ const thirdNumber=prompt("third Number?")
 function getMax(first,second,third){
   let numbers=[]
   if ((first||second||third)%4===0){
-    return null
+    return 'Busted!'
   }
   else numbers.push(first,second,third)
   const arranged=numbers.sort(function(a, b){return b - a})
