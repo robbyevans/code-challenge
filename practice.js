@@ -1,10 +1,13 @@
-const N =9
+function fizzbuzz(n){
+  if(n%3===0 && n%5===0){
+    return 'FizzBuzz'
+  }
+  else if(n%3===0){
+    return 'Fizz'
+  }
+  else{
+    return "Buzz"
+  }
+}
 
-const binary=(N.toString(2))
-
-const binary32=(binary.padStart(32,'0'))
-
-let array=(binary32.split(""))
-console.log(array)
-
-
+console.log(fizzbuzz(15))
