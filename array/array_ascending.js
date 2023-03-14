@@ -4,8 +4,7 @@
 
 //pseudocode
 
-// const prompt= require("prompt-sync")()
-// const numbers=prompt('enter numbers?')
+
 // array=[]
 // array.push(numbers)
 function arrange(array){
@@ -26,3 +25,21 @@ console.log(arrange([5,4,3,2,1]))
 //   let squares_arr = sorted_arr.map((num) => num * num);
 //   return squares_arr;
 // };
+
+array=[1,2,4,5,6]
+const max=Math.max(array)
+const min=Math.min(array)
+
+let completeArray=[]
+
+for(let i=min;i<=max;i++){
+  completeArray.push(i)
+}
+
+let setA=new Set (completeArray)
+let setB=new Set (array)
+
+for(let elements of setB){
+  setA.delete(elements)
+  return setA
+}

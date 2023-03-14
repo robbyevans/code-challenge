@@ -44,7 +44,7 @@
 
 function solution(A, K) {
   // Get the length of the array
-  var N = A.length;
+  let N = A.length;
 
   // If the array is empty or has only one element, return the original array
   if (N < 2) {
