@@ -1,24 +1,14 @@
+//count the number of occurence of an element in the array
 
-//tribonacci sequence
+function countOccurence(array,n){
+  let count=0;
 
-//pseudocode
-
-//1.define a function tribonacci that takes a non empty array of integers
-//and a value of n
-//2.loop over the array while adding the sum of every two corresponding integers 
-//3.push the solution of the two integers as the third value to the array till the limit n is reached
-
-
-//solution
-
-function tribonacci(array,n){
-  const outPut=array
-
-  for(let i=0;i<=n;i++){
-    sum =array[i]+array[i+1]
-    outPut.push(sum)
+  for(let elements of array){
+    if (elements===n){
+      count++
+    }
   }
-  return outPut.slice(0,n)
+  console.log(count)
 }
 
-console.log(tribonacci([1,2],5))
+countOccurence([5,1,2,3,4,5,5,5],5)

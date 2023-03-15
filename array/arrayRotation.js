@@ -42,23 +42,26 @@
 
 //solution
 
-function solution(A, K) {
-  // Get the length of the array
-  let N = A.length;
+//function array rotation
 
-  // If the array is empty or has only one element, return the original array
-  if (N < 2) {
-      return A;
+
+const arrayRotation=(A,K)=>{
+  //if array contains one element ,return the array
+  if(A.length<2){
+    return A
   }
-
-  // Rotate the array K times
-  for (let i = 0; i < K; i++) {
-      // Remove the last element of the array and store it in a new array
-      let lastElement = A.splice(N-1, 1);
-      // Add the last element to the beginning of the original array
-      A.unshift(lastElement[0]);
+//loop over the array n times,for every loop,
+  for(let i=0;i<K;i++){
+    //let the last element in the array be equal to lastEment 
+    lastElement=A[A.length-1]
+    //remove the last element from the array using splice
+    A.splice(A.length-1,1)
+    //push the last element to the from of the array using unshift
+    A.unshift(lastElement)
   }
-
-  // Return the rotated array
-  return A;
+  //return the array
+  console.log(A)
 }
+
+arrayRotation([1,2,3,4,5],1)
+
